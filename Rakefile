@@ -6,7 +6,7 @@ require 'cucumber/rake/task'
 #   t.profile = 'default'
 # end
 
-Dir.chdir('/Automated_CI_Framework') do
+Dir.chdir('/automation_project') do
   puts "Features directory:  #{Dir.pwd}"
   Cucumber::Rake::Task.new(:desktop_integration) do |t|
     t.profile = 'desktop_site'
@@ -15,7 +15,7 @@ Dir.chdir('/Automated_CI_Framework') do
   end
 end
 
-Dir.chdir('/Automated_CI_Framework') do
+Dir.chdir('/automation_project') do
   puts "Features directory:  #{Dir.pwd}"
   Cucumber::Rake::Task.new(:desktop_integration_ext) do |t|
     t.profile = 'desktop_site'

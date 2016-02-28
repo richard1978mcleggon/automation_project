@@ -1,6 +1,6 @@
 [
   {
-    "uri": "C:/Automated_CI_Framework/features/website/Account.feature",
+    "uri": "C:/automation_project/features/website/Account.feature",
     "id": "account-functionality-on-indeed.com",
     "keyword": "Feature",
     "name": "Account Functionality on indeed.com",
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6328961000
+              "duration": 5779331000
             }
           }
         ],
@@ -44,7 +44,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1013058000
+              "duration": 720041000
             }
           },
           {
@@ -56,7 +56,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2679153000
+              "duration": 2187125000
             }
           }
         ],
@@ -67,7 +67,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2580147000
+              "duration": 2853164000
             }
           }
         ]

@@ -3,9 +3,10 @@ class HomePage
 
   page_url ENV['URL']
 
-  div     :top_nav_container,                 :id            =>      'g_nav'
-  link    :goto_sign_in,                      :id            =>      'userOptionsLabel'
-  button  :find_job,                          :id            =>      'fj'
+  text_field    :job_search_field,                  :id            =>      'what'
+  div           :top_nav_container,                 :id            =>      'g_nav'
+  link          :goto_sign_in,                      :id            =>      'userOptionsLabel'
+  button        :find_job,                          :id            =>      'fj'
 
 
   expected_element  :find_job
@@ -20,4 +21,7 @@ class HomePage
     top_nav_container_element.table_element[0][1].link_element(:text => 'Sign out').click
   end
 
+  def search_for(job_type = 'test engineer')
+    job_search_field_element.value = job_type
+  end
 end

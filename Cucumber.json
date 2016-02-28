@@ -1,6 +1,6 @@
 [
   {
-    "uri": "C:/automation_project/features/website/Account.feature",
+    "uri": "features/website/Account.feature",
     "id": "account-functionality-on-indeed.com",
     "keyword": "Feature",
     "name": "Account Functionality on indeed.com",
@@ -18,6 +18,10 @@
           {
             "name": "@sign_in",
             "line": 8
+          },
+          {
+            "name": "@regression",
+            "line": 8
           }
         ],
         "before": [
@@ -27,7 +31,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5779331000
+              "duration": 6018954000
             }
           }
         ],
@@ -44,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 720041000
+              "duration": 1172963000
             }
           },
           {
@@ -56,7 +60,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2187125000
+              "duration": 2668349000
             }
           }
         ],
@@ -67,7 +71,98 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2853164000
+              "duration": 2651299000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/website/Job_Search.feature",
+    "id": "job-search-on-indeed.com",
+    "keyword": "Feature",
+    "name": "Job Search on indeed.com",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "job-search-on-indeed.com;search-for-job",
+        "keyword": "Scenario",
+        "name": "Search for job",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@job_search",
+            "line": 3
+          },
+          {
+            "name": "@regression",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "support/website/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5768727000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit indeed website",
+            "line": 5,
+            "output": [
+              "Job Search | one search. all jobs. Indeed.com"
+            ],
+            "match": {
+              "location": "features/step_definitions/website/Account.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1125263000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I search for \"tester\" job type",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/website/Job_Search.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1012058000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I verify job search results page appears",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/website/Job_Search.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12001000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "support/website/hooks.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1086650000
             }
           }
         ]

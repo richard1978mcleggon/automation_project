@@ -17,12 +17,20 @@ end
 
 Dir.chdir('/automation_project') do
   puts "Features directory:  #{Dir.pwd}"
-  Cucumber::Rake::Task.new(:desktop_integration_ext) do |t|
+  Cucumber::Rake::Task.new(:desktop_integration_ext1) do |t|
     t.profile = 'desktop_site'
     t.cucumber_opts = "--tags @sign_in --format pretty URL=http://www.indeed.com BROWSER=firefox"
-    #t.cucumber_opts = "features --format pretty URL=#{ENV['URL']} BROWSER=#{ENV['BROWSER']}"
   end
-  Rake::Task[:desktop_integration_ext].invoke  #need to use for jenkins execution
+  Rake::Task[:desktop_integration_ext1].invoke  #need to use for jenkins execution
+end
+
+Dir.chdir('/automation_project') do
+  puts "Features directory:  #{Dir.pwd}"
+  Cucumber::Rake::Task.new(:desktop_integration_ext2) do |t|
+    t.profile = 'desktop_site'
+    t.cucumber_opts = "--tags @regression --format pretty URL=http://www.indeed.com BROWSER=firefox"
+  end
+  Rake::Task[:desktop_integration_ext2].invoke  #need to use for jenkins execution
 end
 
 task :default => :integration

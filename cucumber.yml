@@ -1,0 +1,16 @@
+default:  --color --format pretty
+
+website: --profile pom
+
+mobile: --profile mobile_site
+
+desktop_site_saucelabs: -r features/website -r features/step_definitions/website -r support/website --profile common_formatters
+
+desktop_site: -r features/website -r features/step_definitions/website -r support/website --profile common_formatters
+
+mobile_site: -r features/mobile -r features/step_definitions/mobile -r support/mobile --profile common_formatters
+
+common_formatters: >
+  --color --format pretty --format json --out Cucumber.json --format html --out rep.html --format junit --OUT ./
+
+beta: --no-source --color --format pretty --format html --out results.html DATA_YML_FILE=beta_data.yml
